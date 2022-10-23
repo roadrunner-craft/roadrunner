@@ -13,8 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Clone core
-      run: git clone https://github.com/roadrunner-craft/core ../core
     - name: Clone math
       run: git clone https://github.com/roadrunner-craft/math ../math
     - name: Build

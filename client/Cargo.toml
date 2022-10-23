@@ -17,8 +17,7 @@ serde_json = "1.0"
 bincode = "1.2.1"
 notify = { version = "5.0.0-pre.2", optional = true }
 #math = { git = "https://github.com/roadrunner-craft/math" }
-math = { path = "../math" }
-#core = { git = "https://github.com/roadrunner-craft/core" }
+math = { path = "../../math" }
 core = { path = "../core" }
 
 
