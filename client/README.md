@@ -1,32 +1,56 @@
-# Roadrunner ![Rust](https://github.com/roadrunner-craft/client/workflows/Rust/badge.svg)
+# Client
 
-Yet another blocky game :)
+The client binary
 
 ## Dependencies
 
-You'll need the most up to date version of [core](https://github.com/roadrunner-craft/core), [math](https://github.com/roadrunner-craft/math) and [assets](https://github.com/roadrunner-craft/assets)
+You'll need the most up to date version of [math](https://github.com/roadrunner-craft/math) and [assets](https://github.com/roadrunner-craft/assets)
+
+```sh
+# from ~/src/roadrunner-craft
+git clone https://github.com/roadrunner-craft/math
+git clone https://github.com/roadrunner-craft/assets
+```
 
 #### Export the assets
 
 ```sh
-./assets/scripts/export.py ./client
-```
-
-## Run
-
-```sh
-cargo run [--release]
+# from ~/src/roadrunner-craft
+./assets/scripts/export.py ./roadruner/client
 ```
 
 ## Build
 
 ```sh
+# from ~/src/roadruner-craft/client
+cargo build [--release]
+```
+
+## Test
+
+```sh
+# from ~/src/roadruner-craft/client
+cargo test [--release]
+```
+
+## Run
+
+```sh
+# from ~/src/roadruner-craft/client
+cargo run [--release]
+```
+
+## Bundle
+
+```sh
+# from ~/src/roadruner-craft/client
 # install the bundle command
 cargo install cargo-bundle
 
 # build for a release
 cargo bundle --release
 ```
+
 ## Features
 
 To enable a feature, type `cargo run --features FEATURE_NAME`. Here's the list of currently available features:

@@ -15,7 +15,12 @@ jobs:
     - uses: actions/checkout@v2
     - name: Clone math
       run: git clone https://github.com/roadrunner-craft/math ../math
-    - name: Build
-      run: cargo build --verbose
-    - name: Run tests
+    - name: Build & test core
+      working-directory: core
+      run: cargo test --verbose
+    - name: Build & test client
+      working-directory: client
+      run: cargo test --verbose
+    - name: Build & test server
+      working-directory: server
       run: cargo test --verbose
