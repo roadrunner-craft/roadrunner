@@ -1,35 +1,24 @@
-# Roadrunner ![Rust](https://github.com/roadrunner-craft/client/workflows/Rust/badge.svg)
+# Roadrunner ![Rust](https://github.com/roadrunner-craft/roadrunner/workflows/Rust/badge.svg)
 
 Yet another blocky game :)
 
-## Dependencies
-
-You'll need the most up to date version of [core](https://github.com/roadrunner-craft/core), [math](https://github.com/roadrunner-craft/math) and [assets](https://github.com/roadrunner-craft/assets)
-
-#### Export the assets
+## Architecture
 
 ```sh
-./assets/scripts/export.py ./client
+roadrunner-craft # org folder
+├── assets # assets repo
+├── math # math lib repo
+└── roadrunner # game repo
 ```
 
-## Run
+## Client
 
-```sh
-cargo run [--release]
-```
+The client binary
 
-## Build
+## Server
 
-```sh
-# install the bundle command
-cargo install cargo-bundle
+The server binary
 
-# build for a release
-cargo bundle --release
-```
-## Features
+## Core
 
-To enable a feature, type `cargo run --features FEATURE_NAME`. Here's the list of currently available features:
-
-- **watchers**: watch the `res` folder to reload assets at runtime
-- **remote**: temporary flag to make the client connect to the server hardcoded in `main.rs`
+The shared library between client and server
